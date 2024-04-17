@@ -1,5 +1,5 @@
-train: /home/huandong/CV/new_dataset/images/train
-val: /home/huandong/CV/new_dataset/images/val
+train: /home/huandong/CV/dataset_clean/images/train
+val: /home/huandong/CV/dataset_clean/images/val
 
 # Number of classes
 nc: 50

@@ -1,0 +1,41 @@
+train: /home/huandong/CV/dataset_clean/images/train
+val: /home/huandong/CV/dataset_clean/images/val
+
+# Number of classes
+nc: 33
+
+# Class names
+names:
+  - "R-SpeedLimit"
+  - "R-Yield"
+  - "R-KeepRight"
+  - "W-PedestrianCrossing"
+  - "R-Stop"
+  - "R-NoEntry"
+  - "R-NoParking"
+  - "R-NoHeavyVehicles"
+  - "W-RailroadCrossing"
+  - "R-NoOvertaking"
+  - "W-MergeRight"
+  - "W-RoadNarrows"
+  - "W-CurveLeft"
+  - "W-CurveRight"
+  - "W-SchoolZone"
+  - "R-OneWayLeft"
+  - "W-Roundabout"
+  - "W-Roadworks"
+  - "W-SlipperyRoad"
+  - "W-TrafficSignals"
+  - "R-OneWayRight"
+  - "R-NoUTurn"
+  - "W-OtherDanger"
+  - "W-Crossroads"
+  - "W-AddedLaneRight"
+  - "R-BicyclesOnly"
+  - "R-NoTurnOnRed"
+  - "W-WildAnimals"
+  - "W-BicycleCrossing"
+  - "W-SteepAscent"
+  - "W-FallingRocks"
+  - "W-TwoWayTraffic"
+  - "R-LeftLaneMustTurnLeft"
