@@ -1,0 +1,68 @@
+exp 7:
+cd yolov9
+python train.py \
+--batch 16 --epochs 300 --img 640 --device 0 --min-items 0 --close-mosaic 40 \
+--data ../data33.yaml \
+--weights ../weights/gelan-c.pt \
+--cfg models/detect/gelan-c.yaml \
+--hyp hyp.scratch-high.yaml \
+--optimizer AdamW \
+--workers 4 \
+--patience 100
+
+
+Data: 33 labels, no missing data, small bounding boxes removed. (dataset_clean)
+Note: We have solved the bounding box problems! It works right now.
+
+exp 6:
+
+cd yolov9
+python train.py \
+--batch 16 --epochs 150 --img 640 --device 0 --min-items 0 --close-mosaic 120 \
+--data ../data33.yaml \
+--weights ../weights/gelan-c.pt \
+--cfg models/detect/gelan-c.yaml \
+--hyp hyp.scratch-high.yaml \
+--optimizer AdamW \
+--workers 4 \
+--patience 50
+
+
+Data: 33 labels, no missing data, small bounding boxes removed. (dataset_clean)
+
+exp 5:
+
+Only around 70 epochs
+
+python train.py \
+--batch 16 --epochs 300 --img 640 --device 0 --min-items 0 --close-mosaic 200 \
+--data ../data33.yaml \
+--weights ../weights/gelan-c.pt \
+--cfg models/detect/gelan-c.yaml \
+--hyp hyp.scratch-high.yaml \
+--optimizer AdamW \
+--patience 50
+
+Data: 33 labels, no missing data, small bounding boxes removed. (dataset_clean)
+
+
+
+exp4:
+
+python train.py \
+--batch 8 --epochs 300 --img 1280 --device 0 --min-items 0 --close-mosaic 280 \
+--data ../data50.yaml \
+--weights ../weights/gelan-c.pt \
+--cfg models/detect/gelan-c.yaml \
+--hyp hyp.scratch-high.yaml \
+--optimizer AdamW \
+--patience 50
+
+Data: 50 labels, with missing data, all small bounding boxes are kept. (dataset_all)
+
+
+
+
+exp3:
+Training: 150 epochs, only use 5 mosaic, img still 640.
+Data: 50 labels, with missing data, all small bounding boxes are kept. (dataset_all)
