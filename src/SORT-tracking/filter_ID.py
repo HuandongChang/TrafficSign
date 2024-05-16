@@ -42,6 +42,6 @@ def main(input_folder, output_folder):
     filter_and_write_files(input_folder, output_folder, id_count, files_content)
 
 if __name__ == "__main__":
-    input_folder = '/Users/Huandong/Desktop/CV-Project/STOP_labels_sort'  # Set the path to your input folder
-    output_folder = '/Users/Huandong/Desktop/CV-Project/STOP_labels_sort_filtered'  # Set the path to your output folder
+    input_folder = '../Data/labels_sort'  # Set the path to your input folder
+    output_folder = '../Data/labels_sort_filtered'  # Set the path to your output folder
     main(input_folder, output_folder)

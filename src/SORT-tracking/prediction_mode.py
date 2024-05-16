@@ -49,7 +49,25 @@ def main(input_folder, output_folder):
     id_to_mode = get_modes(id_to_classes)
     write_corrected_files(input_folder, output_folder, id_to_mode, files_content)
 
+
+import argparse
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Get Input & Output Files")
+    parser.add_argument('--folder_prefix', type=str, required=True, help='Prefix for Output Folder')
+    # parser.add_argument('--output_dir', type=str, required=True, help='Output directory path')
+    return parser.parse_args()
+
+args = parse_args()
+prefix = args.folder_prefix
+# output_dir = args.output_dir
+
+
+output_folder = f'../Data/{prefix}_sort_final'
+
+
+
 if __name__ == "__main__":
-    input_folder = '/Users/Huandong/Desktop/CV-Project/STOP_labels_sort_filtered'  # Set the path to your input folder
-    output_folder = '/Users/Huandong/Desktop/CV-Project/STOP_labels_sort_filtered_mode'  # Set the path to your output folder
+    input_folder = '../Data/labels_sort_filtered'  # Set the path to your input folder
+    # output_folder = '../../Data/labels_sort_filtered_mode'  # Set the path to your output folder
     main(input_folder, output_folder)

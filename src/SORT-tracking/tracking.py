@@ -2,12 +2,36 @@ import numpy as np
 import os
 from sort.sort import Sort
 
+
+
+
+import argparse
+
+def parse_args():
+    parser = argparse.ArgumentParser(description="Get Input & Output Files")
+    parser.add_argument('--input_dir', type=str, required=True, help='Input directory path')
+    parser.add_argument('--file_prefix', type=str, required=True, help='YOLO Predictions Txt File Prefix')
+    parser.add_argument('--max_frames', type=int, required=True, help='Max Frames of the Video')
+    # parser.add_argument('--output_dir', type=str, required=True, help='Output directory path')
+    return parser.parse_args()
+
+args = parse_args()
+input_dir = args.input_dir
+prefix = args.file_prefix
+max_frames = args.max_frames
+# output_dir = args.output_dir
+output_dir = '../Data/labels_sort'    # Output directory to save modified detection files
+
+
+
+
+
 # Initialize SORT tracker
 tracker = Sort()
 
 # Specify the directories
-input_dir = '/Users/Huandong/Desktop/CV-Project/STOP_labels'  # Input directory containing YOLO format detections
-output_dir = '/Users/Huandong/Desktop/CV-Project/STOP_labels_sort'    # Output directory to save modified detection files
+# input_dir = '/Users/Huandong/Desktop/CV-Project/STOP_labels'  # Input directory containing YOLO format detections
+# output_dir = '/Users/Huandong/Desktop/CV-Project/STOP_labels_sort'    # Output directory to save modified detection files
 
 def convert_yolo_to_sort(yolo_boxes):
     # YOLO format: [x_center, y_center, width, height]
@@ -58,10 +82,10 @@ if not os.path.exists(output_dir):
 #         detections = np.hstack((converted_detections, scores))
 
 
-max_frames = 900
+# max_frames = 900
 # Process frames from 0 to max_frames
 for frame_number in range(max_frames):
-    filename = f"STOP_{frame_number}.txt"
+    filename = f"{prefix}_{frame_number}.txt"
     filepath = os.path.join(input_dir, filename)
     if os.path.exists(filepath):
         data = np.loadtxt(filepath, dtype=float, delimiter=' ')
