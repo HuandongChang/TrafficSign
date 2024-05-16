@@ -10,17 +10,18 @@ Our research utilizes the Mapillary Traffic Sign Dataset (MTSD), which is among 
 
 1.Finetune Yolo
 
-2.Make Inference for each frame on testing video
+2.Make Inference for each frame on testing video ([YOLO Demo Video](https://drive.google.com/file/d/1SAe2DuHKcE8ttk2N2Fc_tu4YsTaFN8fy/view))
 
 3.SORT Item Tracking Algorithm
 
-4.Denoise
+4.Denoise ([YOLO+SORT Demo Video](https://drive.google.com/file/d/13w06EBjkOtgxvQuWXxl1XjYIMarI30QY/view?usp=sharing))
 
  - only keep IDs that appear more than 20 times 
  
- - For predictions of same ID, take the mode as the class prediction (otherwise there might be more than one class predictions) 
+ - For predictions of same ID, take the mode as the class prediction (otherwise there might be more than one class predictions)
+
  
-5.Violation Detection
+5.Violation Detection ([STOP Sign Violation Demo Video](https://drive.google.com/file/d/1shFFMvFG_d6E-8TILrx4ZtbdQcUJEqdM/view?usp=sharing))
 
 Please see more details in report \& presentation.
 
